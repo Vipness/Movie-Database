@@ -33,9 +33,14 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnStats = new System.Windows.Forms.Button();
             this.btnStorage = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabTitle = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -44,6 +49,7 @@
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnStats);
             this.panel1.Controls.Add(this.btnStorage);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -61,10 +67,11 @@
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSettings.Size = new System.Drawing.Size(240, 50);
-            this.btnSettings.TabIndex = 1;
+            this.btnSettings.TabIndex = 6;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.OnButtonClick);
             // 
             // btnStats
             // 
@@ -73,14 +80,15 @@
             this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnStats.Location = new System.Drawing.Point(0, 50);
+            this.btnStats.Location = new System.Drawing.Point(0, 210);
             this.btnStats.Name = "btnStats";
             this.btnStats.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnStats.Size = new System.Drawing.Size(240, 50);
-            this.btnStats.TabIndex = 1;
+            this.btnStats.TabIndex = 3;
             this.btnStats.Text = "Statistics";
             this.btnStats.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnStats.UseVisualStyleBackColor = true;
+            this.btnStats.Click += new System.EventHandler(this.OnButtonClick);
             // 
             // btnStorage
             // 
@@ -89,48 +97,74 @@
             this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnStorage.Location = new System.Drawing.Point(0, 0);
+            this.btnStorage.Location = new System.Drawing.Point(0, 160);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnStorage.Size = new System.Drawing.Size(240, 50);
-            this.btnStorage.TabIndex = 1;
+            this.btnStorage.TabIndex = 4;
             this.btnStorage.Text = "Storage";
             this.btnStorage.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnStorage.UseVisualStyleBackColor = true;
+            this.btnStorage.Click += new System.EventHandler(this.OnButtonClick);
             // 
-            // label1
+            // panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(254, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Search:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(240, 160);
+            this.panel2.TabIndex = 2;
             // 
-            // searchBox
+            // label2
             // 
-            this.searchBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.searchBox.Location = new System.Drawing.Point(325, 9);
-            this.searchBox.Multiline = true;
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(870, 29);
-            this.searchBox.TabIndex = 2;
-            this.searchBox.Text = "Search for something...";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(100, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "User";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Movie_Database.Properties.Resources.Retaliation_vip;
+            this.pictureBox1.Location = new System.Drawing.Point(80, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tabTitle
+            // 
+            this.tabTitle.AutoSize = true;
+            this.tabTitle.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tabTitle.Location = new System.Drawing.Point(246, 9);
+            this.tabTitle.Name = "tabTitle";
+            this.tabTitle.Size = new System.Drawing.Size(211, 50);
+            this.tabTitle.TabIndex = 1;
+            this.tabTitle.Text = "Current Tab";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(240, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(964, 730);
+            this.panel3.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1207, 804);
-            this.Controls.Add(this.searchBox);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1204, 804);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.tabTitle);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -138,6 +172,9 @@
             this.Text = "Movie Database";
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,11 +183,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnStats;
         private System.Windows.Forms.Button btnStorage;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label tabTitle;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

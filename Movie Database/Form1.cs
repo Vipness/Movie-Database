@@ -16,5 +16,11 @@ namespace Movie_Database
         {
             InitializeComponent();
         }
+
+        public void OnButtonClick(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            tabTitle.Text = button.Text;
+        }
     }
 }

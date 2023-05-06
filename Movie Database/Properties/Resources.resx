@@ -121,6 +121,9 @@
   <data name="storage16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\storage16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="settings16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="stats32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stats32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,7 +133,7 @@
   <data name="stats16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stats16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Retaliation_vip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Retaliation_vip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
