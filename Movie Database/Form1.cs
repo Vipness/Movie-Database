@@ -15,12 +15,38 @@ namespace Movie_Database
         public MainForm()
         {
             InitializeComponent();
+            ChangeActiveWindow("Storage");
         }
 
         public void OnButtonClick(object sender, EventArgs e)
         {
             var button = (Button)sender;
             tabTitle.Text = button.Text;
+
+            ChangeActiveWindow(button.Text);
         }
+
+        public void ChangeActiveWindow(string button)
+        {
+            this.FormLoader.Controls.Clear();
+            switch(button)
+            {
+                case "Storage":
+                    StorageForm storageForm = new StorageForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    storageForm.FormBorderStyle = FormBorderStyle.None;
+                    this.FormLoader.Controls.Add(storageForm);
+                    storageForm.Show();
+                    break;
+                case "Statistics":
+                    StatisticsForm statsForm = new StatisticsForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    statsForm.FormBorderStyle = FormBorderStyle.None;
+                    this.FormLoader.Controls.Add(statsForm);
+                    statsForm.Show();
+                    break;
+                case "Settings": MessageBox.Show("Settings active"); break;
+                default: MessageBox.Show("ERROR! Not found!"); break;
+            }
+        }
+        
     }
 }

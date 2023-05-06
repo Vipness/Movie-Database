@@ -35,9 +35,9 @@
             this.btnStorage = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabTitle = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.FormLoader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,8 +61,9 @@
             this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSettings.FlatAppearance.BorderSize = 0;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSettings.Location = new System.Drawing.Point(0, 754);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -78,8 +79,9 @@
             this.btnStats.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStats.FlatAppearance.BorderSize = 0;
             this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnStats.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnStats.Location = new System.Drawing.Point(0, 210);
             this.btnStats.Name = "btnStats";
             this.btnStats.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -95,8 +97,9 @@
             this.btnStorage.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStorage.FlatAppearance.BorderSize = 0;
             this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnStorage.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnStorage.Location = new System.Drawing.Point(0, 160);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -120,17 +123,39 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(100, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "User";
             // 
+            // tabTitle
+            // 
+            this.tabTitle.AutoSize = true;
+            this.tabTitle.Font = new System.Drawing.Font("Segoe UI", 27.75F);
+            this.tabTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tabTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabTitle.Location = new System.Drawing.Point(246, 9);
+            this.tabTitle.Name = "tabTitle";
+            this.tabTitle.Size = new System.Drawing.Size(149, 50);
+            this.tabTitle.TabIndex = 1;
+            this.tabTitle.Text = "Storage";
+            // 
+            // FormLoader
+            // 
+            this.FormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FormLoader.Location = new System.Drawing.Point(240, 74);
+            this.FormLoader.Name = "FormLoader";
+            this.FormLoader.Size = new System.Drawing.Size(964, 730);
+            this.FormLoader.TabIndex = 2;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Movie_Database.Properties.Resources.Retaliation_vip;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(80, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
@@ -138,35 +163,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tabTitle
-            // 
-            this.tabTitle.AutoSize = true;
-            this.tabTitle.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tabTitle.Location = new System.Drawing.Point(246, 9);
-            this.tabTitle.Name = "tabTitle";
-            this.tabTitle.Size = new System.Drawing.Size(211, 50);
-            this.tabTitle.TabIndex = 1;
-            this.tabTitle.Text = "Current Tab";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(240, 74);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(964, 730);
-            this.panel3.TabIndex = 2;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1204, 804);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.FormLoader);
             this.Controls.Add(this.tabTitle);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Database";
@@ -190,7 +197,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label tabTitle;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel FormLoader;
     }
 }
 
