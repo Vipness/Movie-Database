@@ -57,7 +57,6 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnSettings.Image = global::Movie_Database.Properties.Resources.settings16;
             this.btnSettings.Location = new System.Drawing.Point(0, 754);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -74,7 +73,6 @@
             this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnStats.Image = global::Movie_Database.Properties.Resources.stats16;
             this.btnStats.Location = new System.Drawing.Point(0, 50);
             this.btnStats.Name = "btnStats";
             this.btnStats.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -91,7 +89,6 @@
             this.btnStorage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnStorage.Image = global::Movie_Database.Properties.Resources.storage16;
             this.btnStorage.Location = new System.Drawing.Point(0, 0);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.RightToLeft = System.Windows.Forms.RightToLeft.No;
