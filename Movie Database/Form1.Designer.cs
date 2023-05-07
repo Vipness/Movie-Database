@@ -35,9 +35,9 @@
             this.btnStorage = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabTitle = new System.Windows.Forms.Label();
             this.FormLoader = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 804);
+            this.panel1.Size = new System.Drawing.Size(240, 1041);
             this.panel1.TabIndex = 0;
             // 
             // btnSettings
@@ -64,7 +64,7 @@
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnSettings.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSettings.Location = new System.Drawing.Point(0, 754);
+            this.btnSettings.Location = new System.Drawing.Point(0, 991);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSettings.Size = new System.Drawing.Size(240, 50);
@@ -132,6 +132,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "User";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Movie_Database.Properties.Resources.Retaliation_vip;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(80, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabTitle
             // 
             this.tabTitle.AutoSize = true;
@@ -147,37 +158,26 @@
             // FormLoader
             // 
             this.FormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.FormLoader.Location = new System.Drawing.Point(240, 74);
+            this.FormLoader.Location = new System.Drawing.Point(240, 96);
             this.FormLoader.Name = "FormLoader";
-            this.FormLoader.Size = new System.Drawing.Size(964, 730);
+            this.FormLoader.Size = new System.Drawing.Size(1664, 945);
             this.FormLoader.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Movie_Database.Properties.Resources.Retaliation_vip;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1204, 804);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.FormLoader);
             this.Controls.Add(this.tabTitle);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Database";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
