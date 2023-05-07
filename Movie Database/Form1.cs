@@ -31,6 +31,7 @@ namespace Movie_Database
             this.FormLoader.Controls.Clear();
             switch(button)
             {
+                /*
                 case "Storage":
                     StorageForm storageForm = new StorageForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     storageForm.FormBorderStyle = FormBorderStyle.None;
@@ -44,7 +45,13 @@ namespace Movie_Database
                     statsForm.Show();
                     break;
                 case "Settings": MessageBox.Show("Settings active"); break;
-                default: MessageBox.Show("ERROR! Not found!"); break;
+                    */
+                default:
+                    ErrorForm errorForm = new ErrorForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    errorForm.FormBorderStyle = FormBorderStyle.None;
+                    this.FormLoader.Controls.Add(errorForm);
+                    errorForm.Show();
+                    break;
             }
         }
         
