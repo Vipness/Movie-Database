@@ -16,5 +16,10 @@ namespace Movie_Database
         {
             InitializeComponent();
         }
+
+        public void AddMovie(object sender, EventArgs e)
+        {
+            MovieList.Rows.Add(8.9, "LOTR", "Action");
+        }
     }
 }
