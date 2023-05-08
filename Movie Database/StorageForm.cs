@@ -19,7 +19,7 @@ namespace Movie_Database
 
         public void AddMovie(object sender, EventArgs e)
         {
-            MovieList.Rows.Add(8.9, "LOTR", "Action");
+            movieList.Rows.Add(movieRatingTxt.Text, movieNameTxt.Text, movieGenreTxt.Text);
         }
     }
 }
