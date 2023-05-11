@@ -38,21 +38,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabTitle = new System.Windows.Forms.Label();
             this.FormLoader = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.posterImg = new System.Windows.Forms.PictureBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.posterImg)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.posterImg);
-            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnStats);
+            this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnStorage);
+            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -86,7 +84,7 @@
             this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnStats.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStats.Location = new System.Drawing.Point(0, 210);
+            this.btnStats.Location = new System.Drawing.Point(0, 260);
             this.btnStats.Name = "btnStats";
             this.btnStats.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnStats.Size = new System.Drawing.Size(240, 50);
@@ -104,7 +102,7 @@
             this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnStorage.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStorage.Location = new System.Drawing.Point(0, 160);
+            this.btnStorage.Location = new System.Drawing.Point(0, 210);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnStorage.Size = new System.Drawing.Size(240, 50);
@@ -167,25 +165,23 @@
             this.FormLoader.Size = new System.Drawing.Size(1664, 945);
             this.FormLoader.TabIndex = 2;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(527, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Get Movie";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.GetMovie);
-            // 
-            // posterImg
-            // 
-            this.posterImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.posterImg.Location = new System.Drawing.Point(12, 296);
-            this.posterImg.Name = "posterImg";
-            this.posterImg.Size = new System.Drawing.Size(210, 336);
-            this.posterImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.posterImg.TabIndex = 0;
-            this.posterImg.TabStop = false;
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(0, 160);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnSearch.Size = new System.Drawing.Size(240, 50);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.OnButtonClick);
             // 
             // MainForm
             // 
@@ -193,7 +189,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.FormLoader);
             this.Controls.Add(this.tabTitle);
             this.Controls.Add(this.panel1);
@@ -207,7 +202,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.posterImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,8 +218,7 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label tabTitle;
         private System.Windows.Forms.Panel FormLoader;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox posterImg;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

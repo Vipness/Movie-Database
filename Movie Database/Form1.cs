@@ -34,6 +34,13 @@ namespace Movie_Database
             this.FormLoader.Controls.Clear();
             switch(button)
             {
+                case "Search":
+                    SearchForm searchForm = new SearchForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    searchForm.FormBorderStyle = FormBorderStyle.None;
+                    this.FormLoader.Controls.Add(searchForm);
+                    searchForm.Show();
+                    break;
+
                 case "Storage":
                     StorageForm storageForm = new StorageForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     storageForm.FormBorderStyle = FormBorderStyle.None;
@@ -54,37 +61,6 @@ namespace Movie_Database
                     errorForm.Show();
                     break;
             }
-        }
-
-        public void GetMovie(object sender, EventArgs e)
-        {
-            // Create an instance of HttpClient and set the BaseAddress and default request headers
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("http://www.omdbapi.com/");
-
-            // Make a request to the API and get the response
-            HttpResponseMessage response = client.GetAsync("?t=Nobody&apikey=e7450749").Result;
-
-            // Parse the JSON response content
-            string json = response.Content.ReadAsStringAsync().Result;
-            dynamic result = JsonConvert.DeserializeObject(json);
-
-            // Display the movie title in a label control
-            string title = result["Title"];
-            MessageBox.Show($"Movie {title} was released in {result["Year"]} and is rated {result["imdbRating"]} on IMDb");
-
-            LoadPoster(result["Poster"].ToString());
-        }
-
-        public void LoadPoster(string posterLink)
-        {
-            posterImg.SizeMode = PictureBoxSizeMode.Zoom;
-            WebRequest request = WebRequest.Create(posterLink);
-            using (var posterResponse = request.GetResponse())
-                using (var str = posterResponse.GetResponseStream())
-                {
-                    posterImg.Image = Bitmap.FromStream(str);
-                }
         }
     }
 }
