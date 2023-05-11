@@ -35,9 +35,10 @@
             this.btnStorage = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabTitle = new System.Windows.Forms.Label();
             this.FormLoader = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,6 +133,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "User";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Movie_Database.Properties.Resources.Retaliation_vip;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(80, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabTitle
             // 
             this.tabTitle.AutoSize = true;
@@ -152,16 +164,15 @@
             this.FormLoader.Size = new System.Drawing.Size(1664, 945);
             this.FormLoader.TabIndex = 2;
             // 
-            // pictureBox1
+            // button1
             // 
-            this.pictureBox1.Image = global::Movie_Database.Properties.Resources.Retaliation_vip;
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.button1.Location = new System.Drawing.Point(527, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Get Movie";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.GetMovie);
             // 
             // MainForm
             // 
@@ -169,6 +180,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.FormLoader);
             this.Controls.Add(this.tabTitle);
             this.Controls.Add(this.panel1);
@@ -198,6 +210,7 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label tabTitle;
         private System.Windows.Forms.Panel FormLoader;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Movie_Database
 {
@@ -52,6 +54,23 @@ namespace Movie_Database
                     break;
             }
         }
-        
+
+        public void GetMovie(object sender, EventArgs e)
+        {
+            // Create an instance of HttpClient and set the BaseAddress and default request headers
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://www.omdbapi.com/");
+
+            // Make a request to the API and get the response
+            HttpResponseMessage response = client.GetAsync("?t=Nobody&apikey=e7450749").Result;
+
+            // Parse the JSON response content
+            string json = response.Content.ReadAsStringAsync().Result;
+            dynamic result = JsonConvert.DeserializeObject(json);
+
+            // Display the movie title in a label control
+            string title = result["Title"];
+            MessageBox.Show($"Movie {title} was released in {result["Year"]} and is rated {result["imdbRating"]} on IMDb");
+        }
     }
 }
