@@ -39,14 +39,17 @@
             this.tabTitle = new System.Windows.Forms.Label();
             this.FormLoader = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.posterImg = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posterImg)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.posterImg);
             this.panel1.Controls.Add(this.btnSettings);
             this.panel1.Controls.Add(this.btnStats);
             this.panel1.Controls.Add(this.btnStorage);
@@ -174,6 +177,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.GetMovie);
             // 
+            // posterImg
+            // 
+            this.posterImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.posterImg.Location = new System.Drawing.Point(12, 296);
+            this.posterImg.Name = "posterImg";
+            this.posterImg.Size = new System.Drawing.Size(210, 336);
+            this.posterImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.posterImg.TabIndex = 0;
+            this.posterImg.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +207,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.posterImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +225,7 @@
         private System.Windows.Forms.Label tabTitle;
         private System.Windows.Forms.Panel FormLoader;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox posterImg;
     }
 }
 

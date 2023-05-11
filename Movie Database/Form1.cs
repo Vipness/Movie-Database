@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,6 +72,19 @@ namespace Movie_Database
             // Display the movie title in a label control
             string title = result["Title"];
             MessageBox.Show($"Movie {title} was released in {result["Year"]} and is rated {result["imdbRating"]} on IMDb");
+
+            LoadPoster(result["Poster"].ToString());
+        }
+
+        public void LoadPoster(string posterLink)
+        {
+            posterImg.SizeMode = PictureBoxSizeMode.Zoom;
+            WebRequest request = WebRequest.Create(posterLink);
+            using (var posterResponse = request.GetResponse())
+                using (var str = posterResponse.GetResponseStream())
+                {
+                    posterImg.Image = Bitmap.FromStream(str);
+                }
         }
     }
 }
