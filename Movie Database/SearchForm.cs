@@ -37,12 +37,17 @@ namespace Movie_Database
             dynamic movieResult = JsonConvert.DeserializeObject(json);
 
             Movie movie = new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString());
-            movie.Izpis();
 
             // Display the movie title in a label control
             movieHeading.Text = movieResult["Title"];
             ratingTxt.Text = movieResult["imdbRating"];
             yearTxt.Text = movieResult["Year"];
+
+            string genre = movieResult["Genre"];
+            string[] genres = genre.Split(',');
+            genreTxt1.Text = genres[0];
+            genreTxt2.Text = genres[1];
+            genreTxt3.Text = genres[2];
 
             LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;
