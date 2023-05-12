@@ -32,6 +32,7 @@
             this.movieNameTxt = new System.Windows.Forms.TextBox();
             this.btnSearchMovie = new System.Windows.Forms.Button();
             this.MovieLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.yearTxt = new System.Windows.Forms.Label();
             this.ratingTxt = new System.Windows.Forms.Label();
             this.posterImg = new System.Windows.Forms.PictureBox();
             this.movieHeading = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.genreTxt1 = new System.Windows.Forms.Label();
             this.genreTxt2 = new System.Windows.Forms.Label();
             this.genreTxt3 = new System.Windows.Forms.Label();
-            this.yearTxt = new System.Windows.Forms.Label();
             this.MovieLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posterImg)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -66,7 +66,7 @@
             this.movieNameTxt.Multiline = true;
             this.movieNameTxt.Name = "movieNameTxt";
             this.movieNameTxt.Size = new System.Drawing.Size(690, 37);
-            this.movieNameTxt.TabIndex = 2;
+            this.movieNameTxt.TabIndex = 0;
             // 
             // btnSearchMovie
             // 
@@ -104,6 +104,20 @@
             this.MovieLayout.Size = new System.Drawing.Size(1287, 385);
             this.MovieLayout.TabIndex = 6;
             this.MovieLayout.Visible = false;
+            // 
+            // yearTxt
+            // 
+            this.yearTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.yearTxt.AutoSize = true;
+            this.yearTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.yearTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.yearTxt.Location = new System.Drawing.Point(798, 114);
+            this.yearTxt.Name = "yearTxt";
+            this.yearTxt.Size = new System.Drawing.Size(77, 37);
+            this.yearTxt.TabIndex = 10;
+            this.yearTxt.Text = "2023";
+            this.yearTxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ratingTxt
             // 
@@ -150,9 +164,9 @@
             this.flowLayoutPanel1.Controls.Add(this.genreTxt1);
             this.flowLayoutPanel1.Controls.Add(this.genreTxt2);
             this.flowLayoutPanel1.Controls.Add(this.genreTxt3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(670, 181);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(793, 181);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 37);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(87, 37);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // genreTxt1
@@ -164,9 +178,9 @@
             this.genreTxt1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.genreTxt1.Location = new System.Drawing.Point(3, 0);
             this.genreTxt1.Name = "genreTxt1";
-            this.genreTxt1.Size = new System.Drawing.Size(93, 37);
+            this.genreTxt1.Size = new System.Drawing.Size(23, 37);
             this.genreTxt1.TabIndex = 9;
-            this.genreTxt1.Text = "Action";
+            this.genreTxt1.Text = ".";
             this.genreTxt1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // genreTxt2
@@ -176,11 +190,11 @@
             this.genreTxt2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genreTxt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.genreTxt2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.genreTxt2.Location = new System.Drawing.Point(102, 0);
+            this.genreTxt2.Location = new System.Drawing.Point(32, 0);
             this.genreTxt2.Name = "genreTxt2";
-            this.genreTxt2.Size = new System.Drawing.Size(116, 37);
+            this.genreTxt2.Size = new System.Drawing.Size(23, 37);
             this.genreTxt2.TabIndex = 10;
-            this.genreTxt2.Text = "Comedy";
+            this.genreTxt2.Text = ".";
             this.genreTxt2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // genreTxt3
@@ -190,26 +204,12 @@
             this.genreTxt3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genreTxt3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.genreTxt3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.genreTxt3.Location = new System.Drawing.Point(224, 0);
+            this.genreTxt3.Location = new System.Drawing.Point(61, 0);
             this.genreTxt3.Name = "genreTxt3";
-            this.genreTxt3.Size = new System.Drawing.Size(105, 37);
+            this.genreTxt3.Size = new System.Drawing.Size(23, 37);
             this.genreTxt3.TabIndex = 11;
-            this.genreTxt3.Text = "Fantasy";
+            this.genreTxt3.Text = ".";
             this.genreTxt3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // yearTxt
-            // 
-            this.yearTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.yearTxt.AutoSize = true;
-            this.yearTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.yearTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.yearTxt.Location = new System.Drawing.Point(798, 114);
-            this.yearTxt.Name = "yearTxt";
-            this.yearTxt.Size = new System.Drawing.Size(77, 37);
-            this.yearTxt.TabIndex = 10;
-            this.yearTxt.Text = "2023";
-            this.yearTxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // SearchForm
             // 

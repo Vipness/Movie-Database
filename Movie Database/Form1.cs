@@ -18,7 +18,7 @@ namespace Movie_Database
         public MainForm()
         {
             InitializeComponent();
-            ChangeActiveWindow("Storage");
+            ChangeActiveWindow("Search");
         }
 
         public void OnButtonClick(object sender, EventArgs e)

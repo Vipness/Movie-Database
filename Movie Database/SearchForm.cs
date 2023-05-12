@@ -34,15 +34,17 @@ namespace Movie_Database
 
             // Parse the JSON response content
             string json = response.Content.ReadAsStringAsync().Result;
-            dynamic result = JsonConvert.DeserializeObject(json);
+            dynamic movieResult = JsonConvert.DeserializeObject(json);
+
+            Movie movie = new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString());
+            movie.Izpis();
 
             // Display the movie title in a label control
-            // MessageBox.Show($"Movie {result["Title"]} was released in {result["Year"]} and is rated {result["imdbRating"]} on IMDb");
-            movieHeading.Text = result["Title"];
-            ratingTxt.Text = result["imdbRating"];
-            yearTxt.Text = result["Year"];
+            movieHeading.Text = movieResult["Title"];
+            ratingTxt.Text = movieResult["imdbRating"];
+            yearTxt.Text = movieResult["Year"];
 
-            LoadPoster(result["Poster"].ToString());
+            LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;
             movieNameTxt.Text = "";
         }
