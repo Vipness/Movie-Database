@@ -36,9 +36,18 @@ namespace Movie_Database
             string json = response.Content.ReadAsStringAsync().Result;
             dynamic movieResult = JsonConvert.DeserializeObject(json);
 
-            Movie movie = new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString());
+            // Display the movie details
+            MovieStorage movieStorage = new MovieStorage(100);
 
-            // Display the movie title in a label control
+            movieStorage.AddMovie(new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
+
+            MessageBox.Show(movieStorage.MovieCount().ToString());
+
+            UpdateMovieDetails(movieResult);
+        }
+
+        public void UpdateMovieDetails(dynamic movieResult)
+        {
             movieHeading.Text = movieResult["Title"];
             ratingTxt.Text = movieResult["imdbRating"];
             yearTxt.Text = movieResult["Year"];

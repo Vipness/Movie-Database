@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Movie_Database
 {
@@ -14,18 +13,20 @@ namespace Movie_Database
         string rating;
         string year;
         string genre;
+        string posterLink;
 
-        public Movie(string name, string rating, string year, string genre)
+        public Movie(string name, string rating, string year, string genre, string posterLink)
         {
             this.name = name;
             this.rating = rating;
             this.year = year;
             this.genre = genre;
+            this.posterLink = posterLink;
         }
 
-        public void Izpis()
+        public void OutputMovie()
         {
-            MessageBox.Show($"{name}, {rating}, {year}, {genre}");
+            MessageBox.Show($"{name}, {rating}, {year}, {genre}\nPoster link: {posterLink}");
         }
     }
 }
