@@ -30,7 +30,7 @@ namespace Movie_Database
             client.BaseAddress = new Uri("http://www.omdbapi.com/");
 
             // Make a request to the API and get the response
-            HttpResponseMessage response = client.GetAsync($"?t={movieName}&apikey={apiKey}").Result;
+            HttpResponseMessage response = client.GetAsync($"?t={WebUtility.UrlEncode(movieName)}&apikey={apiKey}").Result;
 
             // Parse the JSON response content
             string json = response.Content.ReadAsStringAsync().Result;
