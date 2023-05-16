@@ -20,7 +20,9 @@ namespace Movie_Database
             InitializeComponent();
         }
 
-        public void GetMovie(object sender, EventArgs e)
+        MovieStorage movieStorage = new MovieStorage(100);
+
+        public dynamic GetMovie()
         {
             string movieName = movieNameTxt.Text;
             string apiKey = "e7450749";
@@ -36,18 +38,13 @@ namespace Movie_Database
             string json = response.Content.ReadAsStringAsync().Result;
             dynamic movieResult = JsonConvert.DeserializeObject(json);
 
-            // Display the movie details
-            MovieStorage movieStorage = new MovieStorage(100);
-
-            movieStorage.AddMovie(new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
-
-            MessageBox.Show(movieStorage.MovieCount().ToString());
-
-            UpdateMovieDetails(movieResult);
+            return movieResult;
         }
 
-        public void UpdateMovieDetails(dynamic movieResult)
+        public void UpdateMovieDetails(object sender, EventArgs e)
         {
+            dynamic movieResult = GetMovie();
+
             movieHeading.Text = movieResult["Title"];
             ratingTxt.Text = movieResult["imdbRating"];
             yearTxt.Text = movieResult["Year"];
@@ -56,11 +53,19 @@ namespace Movie_Database
             string[] genres = genre.Split(',');
             genreTxt1.Text = genres[0];
             genreTxt2.Text = genres[1];
-            genreTxt3.Text = genres[2];
 
             LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;
-            movieNameTxt.Text = "";
+            btnAddMovie.Visible = true;
+        }
+
+        public void AddMovie(object sender, EventArgs e)
+        {
+            dynamic movieResult = GetMovie();
+            movieStorage.AddMovie(new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
+
+            MessageBox.Show("Number of all movies: " + movieStorage.MovieCount().ToString());
+            movieStorage.Izpis();
         }
 
         public void LoadPoster(string posterLink)
