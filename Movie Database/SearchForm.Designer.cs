@@ -211,7 +211,7 @@
             this.btnAddMovie.Text = "Add Movie To Storage";
             this.btnAddMovie.UseVisualStyleBackColor = true;
             this.btnAddMovie.Visible = false;
-            this.btnAddMovie.Click += new System.EventHandler(this.AddMovie);
+            this.btnAddMovie.Click += new System.EventHandler(this.ShowAddMovieDialog);
             // 
             // SearchForm
             // 

@@ -20,8 +20,6 @@ namespace Movie_Database
             InitializeComponent();
         }
 
-        MovieStorage movieStorage = new MovieStorage(100);
-
         public dynamic GetMovie()
         {
             string movieName = movieNameTxt.Text;
@@ -59,13 +57,10 @@ namespace Movie_Database
             btnAddMovie.Visible = true;
         }
 
-        public void AddMovie(object sender, EventArgs e)
+        public void ShowAddMovieDialog(object sender, EventArgs e)
         {
-            dynamic movieResult = GetMovie();
-            movieStorage.AddMovie(new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
-
-            MessageBox.Show("Number of all movies: " + movieStorage.MovieCount().ToString());
-            movieStorage.Izpis();
+            AddMovieDialog movieDialog = new AddMovieDialog(GetMovie());
+            movieDialog.ShowDialog();
         }
 
         public void LoadPoster(string posterLink)
