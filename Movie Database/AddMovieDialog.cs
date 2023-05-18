@@ -23,7 +23,10 @@ namespace Movie_Database
 
         public void AddMovie(object sender, EventArgs e)
         {
-            movieStorage.AddMovie(new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
+            string userRating = userRatingTxt.Text;
+            string userNote = userNoteTxt.Text;
+
+            movieStorage.AddMovie(new Movie(userRating, userNote, movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
 
             this.DialogResult = DialogResult.OK;
 
