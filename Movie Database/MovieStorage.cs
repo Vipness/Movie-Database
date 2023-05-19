@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Movie_Database
 {
     internal class MovieStorage
     {
         Movie[] movieStorage;
-        static int numOfMovies = 0;
+        int numOfMovies = 0;
 
         public MovieStorage(int amount)
         {

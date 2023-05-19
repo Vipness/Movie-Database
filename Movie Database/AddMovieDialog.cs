@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Movie_Database
 {
@@ -23,12 +24,20 @@ namespace Movie_Database
 
         public void AddMovie(object sender, EventArgs e)
         {
-            movieStorage.AddMovie(new Movie(movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
+            string userRating = userRatingTxt.Text;
+            string userNote = userNoteTxt.Text;
+
+            movieStorage.AddMovie(new Movie(userRating, userNote, movieResult["Title"].ToString(), movieResult["imdbRating"].ToString(), movieResult["Year"].ToString(), movieResult["Genre"].ToString(), movieResult["Poster"].ToString()));
 
             this.DialogResult = DialogResult.OK;
 
-            MessageBox.Show("Number of all movies: " + movieStorage.MovieCount().ToString());
+            movieStorage.MovieCount();
             movieStorage.Izpis(); // comment/delete later
+
+            using (StreamWriter sw = new StreamWriter("movies.csv", true))
+            {
+                sw.WriteLine($"{userRating};{userNote};{movieResult["Title"].ToString()};{movieResult["imdbRating"].ToString()};{movieResult["Year"].ToString()};{movieResult["Genre"].ToString()};{movieResult["Poster"].ToString()}");
+            }
         }
     }
 }

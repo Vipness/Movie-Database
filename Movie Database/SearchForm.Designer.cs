@@ -60,7 +60,7 @@
             // 
             this.movieNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
             this.movieNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.movieNameTxt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movieNameTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movieNameTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.movieNameTxt.Location = new System.Drawing.Point(421, 12);
             this.movieNameTxt.Multiline = true;
@@ -204,9 +204,9 @@
             this.btnAddMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMovie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnAddMovie.Location = new System.Drawing.Point(0, 870);
+            this.btnAddMovie.Location = new System.Drawing.Point(0, 809);
             this.btnAddMovie.Name = "btnAddMovie";
-            this.btnAddMovie.Size = new System.Drawing.Size(1664, 75);
+            this.btnAddMovie.Size = new System.Drawing.Size(1556, 75);
             this.btnAddMovie.TabIndex = 7;
             this.btnAddMovie.Text = "Add Movie To Storage";
             this.btnAddMovie.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1664, 945);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.btnAddMovie);
             this.Controls.Add(this.MovieLayout);
             this.Controls.Add(this.btnSearchMovie);
