@@ -9,18 +9,14 @@ namespace Movie_Database
 {
     internal class Movie
     {
-        string userRating;
-        string userNote;
         string name;
         string rating;
         string year;
         string genre;
         string posterLink;
 
-        public Movie(string userRating, string userNote, string name, string rating, string year, string genre, string posterLink)
+        public Movie(string name, string rating, string year, string genre, string posterLink)
         {
-            this.userRating = userRating;
-            this.userNote = userNote;
             this.name = name;
             this.rating = rating;
             this.year = year;
@@ -30,11 +26,7 @@ namespace Movie_Database
 
         public void OutputMovie()
         {
-            MessageBox.Show($"Rating: {userRating}\n" +
-                            $"Note: {userNote}\n" +
-                            $"Movie details:\n" +
-                            $"{name}, {rating}, {year}, {genre}\n" +
-                            $"Poster link: {posterLink}");
+            MessageBox.Show($"{name}, {rating}, {year}, {genre}\nPoster link: {posterLink}");
         }
     }
 }

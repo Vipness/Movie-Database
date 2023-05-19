@@ -28,26 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userRatingTxt = new System.Windows.Forms.TextBox();
+            this.userRating = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.userNoteTxt = new System.Windows.Forms.TextBox();
+            this.userNote = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // userRatingTxt
+            // userRating
             // 
-            this.userRatingTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.userRatingTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userRatingTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userRatingTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.userRatingTxt.Location = new System.Drawing.Point(242, 25);
-            this.userRatingTxt.Name = "userRatingTxt";
-            this.userRatingTxt.Size = new System.Drawing.Size(76, 36);
-            this.userRatingTxt.TabIndex = 1;
-            this.userRatingTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.userRatingTxt.WordWrap = false;
+            this.userRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.userRating.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userRating.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.userRating.Location = new System.Drawing.Point(242, 24);
+            this.userRating.Multiline = true;
+            this.userRating.Name = "userRating";
+            this.userRating.Size = new System.Drawing.Size(63, 37);
+            this.userRating.TabIndex = 1;
             // 
             // label1
             // 
@@ -65,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label2.Location = new System.Drawing.Point(321, 25);
+            this.label2.Location = new System.Drawing.Point(307, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 37);
             this.label2.TabIndex = 3;
@@ -82,18 +81,18 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Add a note:";
             // 
-            // userNoteTxt
+            // userNote
             // 
-            this.userNoteTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.userNoteTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
-            this.userNoteTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userNoteTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNoteTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.userNoteTxt.Location = new System.Drawing.Point(34, 127);
-            this.userNoteTxt.Multiline = true;
-            this.userNoteTxt.Name = "userNoteTxt";
-            this.userNoteTxt.Size = new System.Drawing.Size(733, 217);
-            this.userNoteTxt.TabIndex = 2;
+            this.userNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.userNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.userNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userNote.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.userNote.Location = new System.Drawing.Point(34, 127);
+            this.userNote.Multiline = true;
+            this.userNote.Name = "userNote";
+            this.userNote.Size = new System.Drawing.Size(733, 217);
+            this.userNote.TabIndex = 2;
             // 
             // btnOk
             // 
@@ -118,8 +117,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.userNoteTxt);
-            this.Controls.Add(this.userRatingTxt);
+            this.Controls.Add(this.userNote);
+            this.Controls.Add(this.userRating);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -136,11 +135,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox userRatingTxt;
+        private System.Windows.Forms.TextBox userRating;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox userNoteTxt;
+        private System.Windows.Forms.TextBox userNote;
         private System.Windows.Forms.Button btnOk;
     }
 }
