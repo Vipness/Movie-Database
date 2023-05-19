@@ -39,7 +39,7 @@ namespace Movie_Database
             return movieResult;
         }
 
-        public void UpdateMovieDetails(object sender, EventArgs e)
+        public void UpdateMovieDetails()
         {
             dynamic movieResult = GetMovie();
 
@@ -55,6 +55,19 @@ namespace Movie_Database
             LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;
             btnAddMovie.Visible = true;
+        }
+
+        private void movieNameTxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                UpdateMovieDetails();
+            }
+        }
+
+        private void btnSearchMovie_Click(object sender, EventArgs e)
+        {
+            UpdateMovieDetails();
         }
 
         public void ShowAddMovieDialog(object sender, EventArgs e)

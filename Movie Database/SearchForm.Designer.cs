@@ -67,6 +67,7 @@
             this.movieNameTxt.Name = "movieNameTxt";
             this.movieNameTxt.Size = new System.Drawing.Size(690, 37);
             this.movieNameTxt.TabIndex = 0;
+            this.movieNameTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.movieNameTxt_KeyDown);
             // 
             // btnSearchMovie
             // 
@@ -81,7 +82,7 @@
             this.btnSearchMovie.TabIndex = 5;
             this.btnSearchMovie.Text = "Search";
             this.btnSearchMovie.UseVisualStyleBackColor = true;
-            this.btnSearchMovie.Click += new System.EventHandler(this.UpdateMovieDetails);
+            this.btnSearchMovie.Click += new System.EventHandler(this.btnSearchMovie_Click);
             // 
             // MovieLayout
             // 
