@@ -61,13 +61,13 @@ namespace Movie_Database
         {
             if (e.KeyCode == Keys.Enter)
             {
-                UpdateMovieDetails();
+                ValidateMovieName();
             }
         }
 
         private void btnSearchMovie_Click(object sender, EventArgs e)
         {
-            UpdateMovieDetails();
+            ValidateMovieName();
         }
 
         public void ShowAddMovieDialog(object sender, EventArgs e)
@@ -85,6 +85,14 @@ namespace Movie_Database
             {
                 posterImg.Image = Bitmap.FromStream(str);
             }
+        }
+
+        public void ValidateMovieName()
+        {
+            if (!(String.IsNullOrWhiteSpace(movieNameTxt.Text)))
+                UpdateMovieDetails();
+            else
+                MessageBox.Show("Please enter movie name!");
         }
     }
 }
