@@ -53,7 +53,7 @@
             this.label1.Location = new System.Drawing.Point(16, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(606, 58);
+            this.label1.Size = new System.Drawing.Size(485, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search for movies or TV series: ";
             // 
@@ -64,11 +64,11 @@
             this.movieNameTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movieNameTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.movieNameTxt.Location = new System.Drawing.Point(561, 15);
-            this.movieNameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.movieNameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.movieNameTxt.Multiline = true;
             this.movieNameTxt.Name = "movieNameTxt";
             this.movieNameTxt.Size = new System.Drawing.Size(920, 46);
-            this.movieNameTxt.TabIndex = 0;
+            this.movieNameTxt.TabIndex = 1;
             this.movieNameTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.movieNameTxt_KeyDown);
             // 
             // btnSearchMovie
@@ -79,10 +79,10 @@
             this.btnSearchMovie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnSearchMovie.Location = new System.Drawing.Point(1489, 15);
-            this.btnSearchMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchMovie.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchMovie.Name = "btnSearchMovie";
             this.btnSearchMovie.Size = new System.Drawing.Size(145, 46);
-            this.btnSearchMovie.TabIndex = 5;
+            this.btnSearchMovie.TabIndex = 2;
             this.btnSearchMovie.Text = "Search";
             this.btnSearchMovie.UseVisualStyleBackColor = true;
             this.btnSearchMovie.Click += new System.EventHandler(this.btnSearchMovie_Click);
@@ -98,7 +98,7 @@
             this.MovieLayout.Controls.Add(this.movieHeading, 1, 0);
             this.MovieLayout.Controls.Add(this.flowLayoutPanel1, 1, 3);
             this.MovieLayout.Location = new System.Drawing.Point(25, 123);
-            this.MovieLayout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MovieLayout.Margin = new System.Windows.Forms.Padding(4);
             this.MovieLayout.Name = "MovieLayout";
             this.MovieLayout.RowCount = 3;
             this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -143,7 +143,7 @@
             // posterImg
             // 
             this.posterImg.Location = new System.Drawing.Point(4, 4);
-            this.posterImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.posterImg.Margin = new System.Windows.Forms.Padding(4);
             this.posterImg.Name = "posterImg";
             this.MovieLayout.SetRowSpan(this.posterImg, 5);
             this.posterImg.Size = new System.Drawing.Size(474, 564);
@@ -173,7 +173,7 @@
             this.flowLayoutPanel1.Controls.Add(this.genreTxt1);
             this.flowLayoutPanel1.Controls.Add(this.genreTxt2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(1010, 274);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(70, 46);
             this.flowLayoutPanel1.TabIndex = 9;
@@ -217,10 +217,10 @@
             this.btnAddMovie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnAddMovie.Location = new System.Drawing.Point(0, 996);
-            this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddMovie.Name = "btnAddMovie";
             this.btnAddMovie.Size = new System.Drawing.Size(2075, 92);
-            this.btnAddMovie.TabIndex = 7;
+            this.btnAddMovie.TabIndex = 3;
             this.btnAddMovie.Text = "Add Movie To Storage";
             this.btnAddMovie.UseVisualStyleBackColor = true;
             this.btnAddMovie.Visible = false;
@@ -238,7 +238,7 @@
             this.Controls.Add(this.movieNameTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
             this.MovieLayout.ResumeLayout(false);

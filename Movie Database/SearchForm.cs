@@ -60,9 +60,7 @@ namespace Movie_Database
         private void movieNameTxt_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            {
                 ValidateMovieName();
-            }
         }
 
         private void btnSearchMovie_Click(object sender, EventArgs e)
