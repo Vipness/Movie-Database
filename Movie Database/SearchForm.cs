@@ -87,10 +87,17 @@ namespace Movie_Database
 
         public void ValidateMovieName()
         {
-            if (!(String.IsNullOrWhiteSpace(movieNameTxt.Text)))
-                UpdateMovieDetails();
-            else
-                MessageBox.Show("Please enter movie name!");
+            try
+            {
+                if (!(String.IsNullOrWhiteSpace(movieNameTxt.Text)))
+                    UpdateMovieDetails();
+                else
+                    MessageBox.Show("Please enter movie name!");
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("Movie not found in the database!\nPlease try again.");
+            }
         }
     }
 }
