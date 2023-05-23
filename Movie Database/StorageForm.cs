@@ -21,7 +21,6 @@ namespace Movie_Database
 
         public void UpdateMovieList(object sender, EventArgs e)
         {
-            //MovieList.Rows.Add(8.9, "LOTR", "Action");
             using(StreamReader sr = new StreamReader("movies.csv"))
             {
                 while(sr.Peek() >= 0)

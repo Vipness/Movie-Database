@@ -49,8 +49,22 @@ namespace Movie_Database
 
             string genre = movieResult["Genre"];
             string[] genres = genre.Split(',');
-            genreTxt1.Text = genres[0];
-            genreTxt2.Text = genres[1];
+
+            genrePanel.Controls.Clear();
+            for(int i = 0; i < genres.Length; i++)
+            {
+                Label genreLabel = new Label();
+                string name = $"genreTxt{i + 1}";
+                genreLabel.Name = name;
+                genrePanel.Controls.Add(genreLabel);
+
+                Label thisGenre = (Label)genrePanel.Controls.Find(name, true)[0];
+
+                thisGenre.Text = genres[i];
+                thisGenre.AutoSize = true;
+                thisGenre.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                thisGenre.ForeColor = Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            }
 
             LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;

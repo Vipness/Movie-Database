@@ -33,16 +33,13 @@
             this.btnSearchMovie = new System.Windows.Forms.Button();
             this.MovieLayout = new System.Windows.Forms.TableLayoutPanel();
             this.yearTxt = new System.Windows.Forms.Label();
-            this.ratingTxt = new System.Windows.Forms.Label();
             this.posterImg = new System.Windows.Forms.PictureBox();
             this.movieHeading = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.genreTxt1 = new System.Windows.Forms.Label();
-            this.genreTxt2 = new System.Windows.Forms.Label();
+            this.ratingTxt = new System.Windows.Forms.Label();
+            this.genrePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddMovie = new System.Windows.Forms.Button();
             this.MovieLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posterImg)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -50,10 +47,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(485, 46);
+            this.label1.Size = new System.Drawing.Size(383, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search for movies or TV series: ";
             // 
@@ -63,11 +59,10 @@
             this.movieNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.movieNameTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movieNameTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.movieNameTxt.Location = new System.Drawing.Point(561, 15);
-            this.movieNameTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.movieNameTxt.Location = new System.Drawing.Point(421, 12);
             this.movieNameTxt.Multiline = true;
             this.movieNameTxt.Name = "movieNameTxt";
-            this.movieNameTxt.Size = new System.Drawing.Size(920, 46);
+            this.movieNameTxt.Size = new System.Drawing.Size(690, 37);
             this.movieNameTxt.TabIndex = 1;
             this.movieNameTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.movieNameTxt_KeyDown);
             // 
@@ -78,10 +73,9 @@
             this.btnSearchMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchMovie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnSearchMovie.Location = new System.Drawing.Point(1489, 15);
-            this.btnSearchMovie.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchMovie.Location = new System.Drawing.Point(1117, 12);
             this.btnSearchMovie.Name = "btnSearchMovie";
-            this.btnSearchMovie.Size = new System.Drawing.Size(145, 46);
+            this.btnSearchMovie.Size = new System.Drawing.Size(109, 37);
             this.btnSearchMovie.TabIndex = 2;
             this.btnSearchMovie.Text = "Search";
             this.btnSearchMovie.UseVisualStyleBackColor = true;
@@ -93,12 +87,11 @@
             this.MovieLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.MovieLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.MovieLayout.Controls.Add(this.yearTxt, 1, 2);
-            this.MovieLayout.Controls.Add(this.ratingTxt, 1, 1);
             this.MovieLayout.Controls.Add(this.posterImg, 0, 0);
             this.MovieLayout.Controls.Add(this.movieHeading, 1, 0);
-            this.MovieLayout.Controls.Add(this.flowLayoutPanel1, 1, 3);
-            this.MovieLayout.Location = new System.Drawing.Point(25, 123);
-            this.MovieLayout.Margin = new System.Windows.Forms.Padding(4);
+            this.MovieLayout.Controls.Add(this.ratingTxt, 1, 1);
+            this.MovieLayout.Controls.Add(this.genrePanel, 1, 3);
+            this.MovieLayout.Location = new System.Drawing.Point(19, 100);
             this.MovieLayout.Name = "MovieLayout";
             this.MovieLayout.RowCount = 3;
             this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -106,7 +99,10 @@
             this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.MovieLayout.Size = new System.Drawing.Size(1609, 572);
+            this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MovieLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.MovieLayout.Size = new System.Drawing.Size(1207, 465);
             this.MovieLayout.TabIndex = 6;
             this.MovieLayout.Visible = false;
             // 
@@ -117,36 +113,19 @@
             this.yearTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yearTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.yearTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.yearTxt.Location = new System.Drawing.Point(999, 170);
-            this.yearTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.yearTxt.Location = new System.Drawing.Point(746, 138);
             this.yearTxt.Name = "yearTxt";
-            this.yearTxt.Size = new System.Drawing.Size(92, 46);
+            this.yearTxt.Size = new System.Drawing.Size(77, 37);
             this.yearTxt.TabIndex = 10;
             this.yearTxt.Text = "2023";
             this.yearTxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ratingTxt
-            // 
-            this.ratingTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ratingTxt.AutoSize = true;
-            this.ratingTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ratingTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.ratingTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ratingTxt.Location = new System.Drawing.Point(1014, 85);
-            this.ratingTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ratingTxt.Name = "ratingTxt";
-            this.ratingTxt.Size = new System.Drawing.Size(63, 46);
-            this.ratingTxt.TabIndex = 8;
-            this.ratingTxt.Text = "0.0";
-            this.ratingTxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // posterImg
             // 
-            this.posterImg.Location = new System.Drawing.Point(4, 4);
-            this.posterImg.Margin = new System.Windows.Forms.Padding(4);
+            this.posterImg.Location = new System.Drawing.Point(3, 3);
             this.posterImg.Name = "posterImg";
             this.MovieLayout.SetRowSpan(this.posterImg, 5);
-            this.posterImg.Size = new System.Drawing.Size(474, 564);
+            this.posterImg.Size = new System.Drawing.Size(356, 458);
             this.posterImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.posterImg.TabIndex = 3;
             this.posterImg.TabStop = false;
@@ -157,56 +136,36 @@
             this.movieHeading.AutoSize = true;
             this.movieHeading.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movieHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.movieHeading.Location = new System.Drawing.Point(952, 0);
-            this.movieHeading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.movieHeading.Location = new System.Drawing.Point(710, 0);
             this.movieHeading.Name = "movieHeading";
-            this.movieHeading.Size = new System.Drawing.Size(186, 46);
+            this.movieHeading.Size = new System.Drawing.Size(149, 37);
             this.movieHeading.TabIndex = 8;
             this.movieHeading.Text = "Movie Title";
             this.movieHeading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // flowLayoutPanel1
+            // ratingTxt
             // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.flowLayoutPanel1.Controls.Add(this.genreTxt1);
-            this.flowLayoutPanel1.Controls.Add(this.genreTxt2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1010, 274);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(70, 46);
-            this.flowLayoutPanel1.TabIndex = 9;
+            this.ratingTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ratingTxt.AutoSize = true;
+            this.ratingTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ratingTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.ratingTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ratingTxt.Location = new System.Drawing.Point(758, 69);
+            this.ratingTxt.Name = "ratingTxt";
+            this.ratingTxt.Size = new System.Drawing.Size(53, 37);
+            this.ratingTxt.TabIndex = 8;
+            this.ratingTxt.Text = "0.0";
+            this.ratingTxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // genreTxt1
+            // genrePanel
             // 
-            this.genreTxt1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.genreTxt1.AutoSize = true;
-            this.genreTxt1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genreTxt1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.genreTxt1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.genreTxt1.Location = new System.Drawing.Point(4, 0);
-            this.genreTxt1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.genreTxt1.Name = "genreTxt1";
-            this.genreTxt1.Size = new System.Drawing.Size(27, 46);
-            this.genreTxt1.TabIndex = 9;
-            this.genreTxt1.Text = ".";
-            this.genreTxt1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // genreTxt2
-            // 
-            this.genreTxt2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.genreTxt2.AutoSize = true;
-            this.genreTxt2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genreTxt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.genreTxt2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.genreTxt2.Location = new System.Drawing.Point(39, 0);
-            this.genreTxt2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.genreTxt2.Name = "genreTxt2";
-            this.genreTxt2.Size = new System.Drawing.Size(27, 46);
-            this.genreTxt2.TabIndex = 10;
-            this.genreTxt2.Text = ".";
-            this.genreTxt2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.genrePanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.genrePanel.AutoSize = true;
+            this.genrePanel.Location = new System.Drawing.Point(749, 210);
+            this.genrePanel.MinimumSize = new System.Drawing.Size(70, 40);
+            this.genrePanel.Name = "genrePanel";
+            this.genrePanel.Size = new System.Drawing.Size(70, 40);
+            this.genrePanel.TabIndex = 11;
             // 
             // btnAddMovie
             // 
@@ -216,10 +175,9 @@
             this.btnAddMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMovie.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.btnAddMovie.Location = new System.Drawing.Point(0, 996);
-            this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddMovie.Location = new System.Drawing.Point(0, 809);
             this.btnAddMovie.Name = "btnAddMovie";
-            this.btnAddMovie.Size = new System.Drawing.Size(2075, 92);
+            this.btnAddMovie.Size = new System.Drawing.Size(1556, 75);
             this.btnAddMovie.TabIndex = 3;
             this.btnAddMovie.Text = "Add Movie To Storage";
             this.btnAddMovie.UseVisualStyleBackColor = true;
@@ -228,24 +186,21 @@
             // 
             // SearchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(2075, 1088);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.btnAddMovie);
             this.Controls.Add(this.MovieLayout);
             this.Controls.Add(this.btnSearchMovie);
             this.Controls.Add(this.movieNameTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
             this.MovieLayout.ResumeLayout(false);
             this.MovieLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posterImg)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,9 +216,7 @@
         private System.Windows.Forms.Label ratingTxt;
         private System.Windows.Forms.Label movieHeading;
         private System.Windows.Forms.Label yearTxt;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label genreTxt1;
-        private System.Windows.Forms.Label genreTxt2;
         private System.Windows.Forms.Button btnAddMovie;
+        private System.Windows.Forms.FlowLayoutPanel genrePanel;
     }
 }
