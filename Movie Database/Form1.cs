@@ -53,7 +53,6 @@ namespace Movie_Database
                     this.FormLoader.Controls.Add(statsForm);
                     statsForm.Show();
                     break;
-                //case "Settings": MessageBox.Show("Settings active"); break;
                 default:
                     ErrorForm errorForm = new ErrorForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     errorForm.FormBorderStyle = FormBorderStyle.None;
