@@ -134,11 +134,11 @@
             // 
             this.movieHeading.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.movieHeading.AutoSize = true;
-            this.movieHeading.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movieHeading.Font = new System.Drawing.Font("Segoe UI", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movieHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.movieHeading.Location = new System.Drawing.Point(710, 0);
+            this.movieHeading.Location = new System.Drawing.Point(667, 0);
             this.movieHeading.Name = "movieHeading";
-            this.movieHeading.Size = new System.Drawing.Size(149, 37);
+            this.movieHeading.Size = new System.Drawing.Size(234, 59);
             this.movieHeading.TabIndex = 8;
             this.movieHeading.Text = "Movie Title";
             this.movieHeading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
