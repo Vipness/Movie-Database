@@ -59,10 +59,9 @@
             this.movieNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.movieNameTxt.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.movieNameTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.movieNameTxt.Location = new System.Drawing.Point(421, 12);
-            this.movieNameTxt.Multiline = true;
+            this.movieNameTxt.Location = new System.Drawing.Point(421, 15);
             this.movieNameTxt.Name = "movieNameTxt";
-            this.movieNameTxt.Size = new System.Drawing.Size(690, 37);
+            this.movieNameTxt.Size = new System.Drawing.Size(690, 28);
             this.movieNameTxt.TabIndex = 1;
             this.movieNameTxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.movieNameTxt_KeyDown);
             // 
