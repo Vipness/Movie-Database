@@ -32,18 +32,7 @@ namespace Movie_Database
                 }
             }
         }
-
-        /*
-        public void LoadPoster(string posterLink)
-        {
-            posterImg.SizeMode = PictureBoxSizeMode.Zoom;
-            WebRequest request = WebRequest.Create(posterLink);
-            using (var posterResponse = request.GetResponse())
-            using (var str = posterResponse.GetResponseStream())
-            {
-                posterImg.Image = Bitmap.FromStream(str);
             }
         }
-        */
     }
 }

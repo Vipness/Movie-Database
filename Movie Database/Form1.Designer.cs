@@ -33,10 +33,10 @@
             this.btnStats = new System.Windows.Forms.Button();
             this.btnStorage = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.tabTitle = new System.Windows.Forms.Label();
-            this.FormLoader = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabTitle = new System.Windows.Forms.Label();
+            this.FormLoader = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,26 +109,6 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.OnButtonClick);
             // 
-            // tabTitle
-            // 
-            this.tabTitle.AutoSize = true;
-            this.tabTitle.Font = new System.Drawing.Font("Segoe UI", 27.75F);
-            this.tabTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.tabTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabTitle.Location = new System.Drawing.Point(246, 9);
-            this.tabTitle.Name = "tabTitle";
-            this.tabTitle.Size = new System.Drawing.Size(149, 50);
-            this.tabTitle.TabIndex = 1;
-            this.tabTitle.Text = "Storage";
-            // 
-            // FormLoader
-            // 
-            this.FormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.FormLoader.Location = new System.Drawing.Point(240, -100);
-            this.FormLoader.Name = "FormLoader";
-            this.FormLoader.Size = new System.Drawing.Size(1203, 945);
-            this.FormLoader.TabIndex = 2;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox1);
@@ -148,6 +128,26 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // tabTitle
+            // 
+            this.tabTitle.AutoSize = true;
+            this.tabTitle.Font = new System.Drawing.Font("Segoe UI", 27.75F);
+            this.tabTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.tabTitle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabTitle.Location = new System.Drawing.Point(246, 9);
+            this.tabTitle.Name = "tabTitle";
+            this.tabTitle.Size = new System.Drawing.Size(149, 50);
+            this.tabTitle.TabIndex = 1;
+            this.tabTitle.Text = "Storage";
+            // 
+            // FormLoader
+            // 
+            this.FormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FormLoader.Location = new System.Drawing.Point(240, -100);
+            this.FormLoader.Name = "FormLoader";
+            this.FormLoader.Size = new System.Drawing.Size(1203, 945);
+            this.FormLoader.TabIndex = 2;
             // 
             // MainForm
             // 

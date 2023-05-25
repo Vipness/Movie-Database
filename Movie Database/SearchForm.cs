@@ -110,7 +110,11 @@ namespace Movie_Database
             }
             catch(IndexOutOfRangeException ex)
             {
-                MessageBox.Show("Movie not found in the database!\nPlease try again.");
+                MessageBox.Show("Movie not found in the database!\nPlease try again.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch(NullReferenceException ex)
+            {
+                MessageBox.Show("Movie not found in the database!\nPlease try again.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
