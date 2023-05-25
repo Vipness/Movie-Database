@@ -111,6 +111,8 @@ namespace Movie_Database
             }
             catch(IndexOutOfRangeException ex)
             {
+                genrePanel.Controls.Clear();
+                posterImg.Image = null;
                 MessageBox.Show("Movie not found in the database!\nPlease try again.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 movieNameTxt.Text = "";
             }

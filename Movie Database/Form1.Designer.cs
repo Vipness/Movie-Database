@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnStats = new System.Windows.Forms.Button();
             this.btnStorage = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,7 +44,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.btnStats);
             this.panel1.Controls.Add(this.btnStorage);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel2);
@@ -54,24 +52,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 845);
             this.panel1.TabIndex = 0;
-            // 
-            // btnStats
-            // 
-            this.btnStats.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStats.FlatAppearance.BorderSize = 0;
-            this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStats.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnStats.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStats.Location = new System.Drawing.Point(0, 250);
-            this.btnStats.Name = "btnStats";
-            this.btnStats.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnStats.Size = new System.Drawing.Size(240, 50);
-            this.btnStats.TabIndex = 3;
-            this.btnStats.Text = "Statistics";
-            this.btnStats.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnStats.UseVisualStyleBackColor = true;
-            this.btnStats.Click += new System.EventHandler(this.OnButtonClick);
             // 
             // btnStorage
             // 
@@ -174,7 +154,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnStats;
         private System.Windows.Forms.Button btnStorage;
         private System.Windows.Forms.Label tabTitle;
         private System.Windows.Forms.Panel FormLoader;
