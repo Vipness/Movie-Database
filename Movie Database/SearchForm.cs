@@ -69,7 +69,6 @@ namespace Movie_Database
             LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;
             btnAddMovie.Visible = true;
-            movieNameTxt.Text = "";
         }
 
         private void movieNameTxt_KeyDown(object sender, KeyEventArgs e)
@@ -87,6 +86,7 @@ namespace Movie_Database
         {
             AddMovieDialog movieDialog = new AddMovieDialog(GetMovie());
             movieDialog.ShowDialog();
+            movieNameTxt.Text = "";
         }
 
         public void LoadPoster(string posterLink)

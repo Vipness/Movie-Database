@@ -37,6 +37,8 @@ namespace Movie_Database
             {
                 sw.WriteLine($"{userRating};{userNote};{movieResult["Title"].ToString()};{movieResult["imdbRating"].ToString()};{movieResult["Year"].ToString()};{movieResult["Genre"].ToString()};{movieResult["Poster"].ToString()}");
             }
+
+            MessageBox.Show($"{movieResult["Title"].ToString()} has been added to the database!", "Movie Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
