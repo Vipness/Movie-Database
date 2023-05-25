@@ -47,6 +47,12 @@ namespace Movie_Database
                     this.FormLoader.Controls.Add(storageForm);
                     storageForm.Show();
                     break;
+                case "Statistics":
+                    StatisticsForm statsForm = new StatisticsForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+                    statsForm.FormBorderStyle = FormBorderStyle.None;
+                    this.FormLoader.Controls.Add(statsForm);
+                    statsForm.Show();
+                    break;
                 default:
                     ErrorForm errorForm = new ErrorForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
                     errorForm.FormBorderStyle = FormBorderStyle.None;
