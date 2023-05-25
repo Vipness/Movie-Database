@@ -46,6 +46,7 @@ namespace Movie_Database
             movieHeading.Text = movieResult["Title"];
             ratingTxt.Text = movieResult["imdbRating"];
             yearTxt.Text = movieResult["Year"];
+            descTxt.Text = movieResult["Plot"];
 
             string genre = movieResult["Genre"];
             string[] genres = genre.Split(',');

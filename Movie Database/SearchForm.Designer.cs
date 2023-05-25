@@ -38,6 +38,7 @@
             this.ratingTxt = new System.Windows.Forms.Label();
             this.genrePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddMovie = new System.Windows.Forms.Button();
+            this.descTxt = new System.Windows.Forms.Label();
             this.MovieLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.posterImg)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +91,7 @@
             this.MovieLayout.Controls.Add(this.movieHeading, 1, 0);
             this.MovieLayout.Controls.Add(this.ratingTxt, 1, 1);
             this.MovieLayout.Controls.Add(this.genrePanel, 1, 3);
+            this.MovieLayout.Controls.Add(this.descTxt, 1, 4);
             this.MovieLayout.Location = new System.Drawing.Point(19, 100);
             this.MovieLayout.Name = "MovieLayout";
             this.MovieLayout.RowCount = 3;
@@ -183,6 +185,20 @@
             this.btnAddMovie.Visible = false;
             this.btnAddMovie.Click += new System.EventHandler(this.ShowAddMovieDialog);
             // 
+            // descTxt
+            // 
+            this.descTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.descTxt.AutoSize = true;
+            this.descTxt.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.descTxt.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.descTxt.Location = new System.Drawing.Point(748, 276);
+            this.descTxt.Name = "descTxt";
+            this.descTxt.Size = new System.Drawing.Size(73, 37);
+            this.descTxt.TabIndex = 10;
+            this.descTxt.Text = "Cool";
+            this.descTxt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,5 +233,6 @@
         private System.Windows.Forms.Label yearTxt;
         private System.Windows.Forms.Button btnAddMovie;
         private System.Windows.Forms.FlowLayoutPanel genrePanel;
+        private System.Windows.Forms.Label descTxt;
     }
 }
