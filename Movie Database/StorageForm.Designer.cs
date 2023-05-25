@@ -154,7 +154,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StorageForm";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "StorageForm";
             this.Load += new System.EventHandler(this.UpdateMovieList);
             this.panel1.ResumeLayout(false);

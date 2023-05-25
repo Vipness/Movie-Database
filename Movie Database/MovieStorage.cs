@@ -11,27 +11,33 @@ namespace Movie_Database
     {
         Movie[] movieStorage;
         int numOfMovies = 0;
+        static int nextMovieIndex = 0;
 
-        public MovieStorage(int amount)
+        public MovieStorage()
         {
-            movieStorage = new Movie[amount];
+            movieStorage = new Movie[1];
         }
 
         public void AddMovie(Movie m)
         {
+            movieStorage = IncreaseStorageSize(movieStorage);
             movieStorage[numOfMovies++] = m;
+            nextMovieIndex++;
         }
 
-        public int MovieCount()
+        public void MovieCount()
         {
-            return numOfMovies;
+            MessageBox.Show((nextMovieIndex + 1).ToString(), "Current number of movies in storage", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        // delete later
-        public void Izpis()
+        public Movie[] IncreaseStorageSize(Movie[] movieStorage)
         {
-            for (int i = 0; i < numOfMovies; i++) 
-                movieStorage[i].OutputMovie();
+            Movie[] newStorage = new Movie[movieStorage.Length + 1];
+
+            for(int i = 0; i < movieStorage.Length; i++)
+                newStorage[i] = movieStorage[i];
+
+            return newStorage;
         }
     }
 }
