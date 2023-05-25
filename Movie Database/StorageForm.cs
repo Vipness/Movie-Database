@@ -28,12 +28,11 @@ namespace Movie_Database
                     string movie = sr.ReadLine();
                     string[] movieProperties = movie.Split(';');
 
-                    string posterLink = movieProperties[movieProperties.Length - 1].ToString();
                     string movieTitle = movieProperties[2].ToString();
                     string userRating = movieProperties[0].ToString();
                     string userNote = movieProperties[1].ToString();
 
-                    MovieList.Rows.Add(posterLink, movieTitle, userRating, userNote);
+                    MovieList.Rows.Add(movieTitle, userRating, userNote);
                 }
             }
         }

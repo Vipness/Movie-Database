@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MovieList = new System.Windows.Forms.DataGridView();
-            this.poster = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.note = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,7 +81,6 @@
             this.MovieList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MovieList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MovieList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.poster,
             this.title,
             this.rating,
             this.note});
@@ -113,15 +111,6 @@
             this.MovieList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.MovieList.Size = new System.Drawing.Size(1637, 871);
             this.MovieList.TabIndex = 5;
-            // 
-            // poster
-            // 
-            this.poster.HeaderText = "Poster";
-            this.poster.MinimumWidth = 6;
-            this.poster.Name = "poster";
-            this.poster.ReadOnly = true;
-            this.poster.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.poster.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // title
             // 
@@ -169,7 +158,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView MovieList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn poster;
         private System.Windows.Forms.DataGridViewTextBoxColumn title;
         private System.Windows.Forms.DataGridViewTextBoxColumn rating;
         private System.Windows.Forms.DataGridViewTextBoxColumn note;
