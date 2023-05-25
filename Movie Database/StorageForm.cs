@@ -21,19 +21,27 @@ namespace Movie_Database
 
         public void UpdateMovieList(object sender, EventArgs e)
         {
-            using(StreamReader sr = new StreamReader("movies.csv"))
+            try
             {
-                while(sr.Peek() >= 0)
+                using (StreamReader sr = new StreamReader("movies.csv"))
                 {
-                    string movie = sr.ReadLine();
-                    string[] movieProperties = movie.Split(';');
+                    while (sr.Peek() >= 0)
+                    {
+                        string movie = sr.ReadLine();
+                        string[] movieProperties = movie.Split(';');
 
-                    string movieTitle = movieProperties[2].ToString();
-                    string userRating = movieProperties[0].ToString();
-                    string userNote = movieProperties[1].ToString();
+                        string movieTitle = movieProperties[2].ToString();
+                        string userRating = movieProperties[0].ToString();
+                        string userNote = movieProperties[1].ToString();
 
-                    MovieList.Rows.Add(movieTitle, userRating, userNote);
+                        MovieList.Rows.Add(movieTitle, userRating + " / 10", userNote);
+                        MovieList.Columns["rating"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    }
                 }
+            }
+            catch(FileNotFoundException ex)
+            {
+                MessageBox.Show("No storage file was found!", "Storage not found.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

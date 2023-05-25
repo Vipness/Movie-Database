@@ -18,6 +18,7 @@ namespace Movie_Database
         public MainForm()
         {
             InitializeComponent();
+            tabTitle.Text = "Search";
             ChangeActiveWindow("Search");
         }
 

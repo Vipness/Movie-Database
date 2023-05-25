@@ -121,10 +121,12 @@
             // 
             // rating
             // 
+            this.rating.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.rating.HeaderText = "Rating";
             this.rating.MinimumWidth = 6;
             this.rating.Name = "rating";
             this.rating.ReadOnly = true;
+            this.rating.Width = 95;
             // 
             // note
             // 
