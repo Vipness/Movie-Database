@@ -69,6 +69,7 @@ namespace Movie_Database
             LoadPoster(movieResult["Poster"].ToString());
             MovieLayout.Visible = true;
             btnAddMovie.Visible = true;
+            movieNameTxt.Text = "";
         }
 
         private void movieNameTxt_KeyDown(object sender, KeyEventArgs e)
@@ -106,15 +107,19 @@ namespace Movie_Database
                 if (!(String.IsNullOrWhiteSpace(movieNameTxt.Text)))
                     UpdateMovieDetails();
                 else
-                    MessageBox.Show("Please enter movie name!");
+                    MessageBox.Show("Please enter movie name!", "Invalid movie name.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch(IndexOutOfRangeException ex)
             {
                 MessageBox.Show("Movie not found in the database!\nPlease try again.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                movieNameTxt.Text = "";
             }
-            catch(NullReferenceException ex)
+            catch (NullReferenceException ex)
             {
-                MessageBox.Show("Movie not found in the database!\nPlease try again.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                genrePanel.Controls.Clear();
+                posterImg.Image = null;
+                MessageBox.Show("Movie not found in the database!", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                movieNameTxt.Text = "";
             }
         }
     }
